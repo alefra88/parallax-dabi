@@ -34,8 +34,8 @@
 
 .hand-right {
   top: 43%;
-  right: 3%;
-  width: 100%;
+  right: 4%;
+  width: 97%;
   animation: move 0.3s infinite;
 }
 
@@ -62,6 +62,15 @@
 }
 
 .wraper:hover .hand-left {
-  transition: 0.1s ease;
+  background-position: -10% 90%;
+  transform: rotateY(2deg)  rotatex(10deg) translateX(-15%) rotateZ(5deg);
+  animation: none;
+  transition: 4s ease;
   opacity: 0;
+}
+
+.wraper:hover .hand-right {
+  background-position: -10% 90%;
+  transform: rotateY(15deg);
+  animation: none;
 }
