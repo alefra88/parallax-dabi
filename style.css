@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 1s;
+}
+
+.wraper {
+  position: absolute;
+  width: 860px;
+  height: 1200px;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  perspective: 1000px;
+}
+.frame {
+  position: absolute;
+  border: 5px solid black;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.dabi {
+  position: absolute;
+  top: 10px;
+}
+
+.hands {
+  position: absolute;
+  /* pointer-events: none; */
+}
+
+.hand-right {
+  top: 43%;
+  right: 3%;
+  width: 100%;
+  animation: move 0.4s infinite;
+}
+
+.hand-left {
+  top: 1%;
+  left: 71%;
+  animation: move 0.1s infinite;
+  opacity: 1;
+  transition: 3s ease-in-out;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(-1%);
+  }
+  100% {
+    transform: translateX(1%);
+  }
+}
+
+.wraper:hover .frame {
+  background-position: -10% 90%;
+  transform: rotateY(15deg);
+}
+
+.wraper:hover .hand-left {
+  transition: 0.1s ease;
+  opacity: 0;
+}
